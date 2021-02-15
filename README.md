@@ -12,6 +12,8 @@
 
 # Network Schema
 
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/007055b2-0ff4-4243-99a8-18b82abe163a.jpg)
+
 This is a simple example of a Network made up by a switch, a router and two hosts, worker-1 and worker-2. As a consequence it is possible to identify two subnets:
 - For the first one, which is between the router and the worker-1, we used the address 192.168.0.0/23
 - For the second one, which is between the router and the worker-2, we used the address 192.168.2.0/23
