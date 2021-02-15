@@ -29,12 +29,18 @@ Notes: the memory of worker-1 and worker-2 had to be increased to 512 with the c
 
 ## Switch
 
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine4.png)
+
 The first three lines are provided in a template and have the purpose to install some useful for the configuration of the vlans.
 Second step is to create the bridges with the so called command `add-br`.
 Then we have a command belonging to Netem, `sudo tc qdisc add dev [name of interface] root tbf rate [value] burst [value] latency [value]` in order to have a bandwidth limit network as it was requested. It is applied to all its four interfaces.
 Finally the commands `sudo ip link set [name of the interface] up` are used to enable all the different interfaces.
 
 ## Router-1
+
+
+
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine5.png)
 
 First of all it is necessary to enable the Kernel option for IP forwarding with the command “sudo sysctl -w net.ipv4.ip_forward=1”. Then the other commands are fundamental in order to connect the router with the two hosts.
 “sudo ip link add link enp0s8 name enp0s8.2 type vlan id 2” and “sudo ip link add link enp0s8 name enp0s8.2 type vlan id 3” add virtual links to the two subnets of the hosts.
@@ -45,6 +51,9 @@ The command `iperf -s &` is written in order to emulate the traffic within the n
 
 ## Worker-1
 
+
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine6.png)
+
 The commands are the same as the ones used in the router and in the switch: so we begin by giving a correct ip address to our interface.
 Then we activate this interface. Finally we connect worker-1 with the router thanks to the command “sudo ip route add [ip address] via [ip address]”. With our addresses it means that if we want to reach the network 10.1.1.0/30 it is necessary to contact the gateway with ip 192.168.0.1 using the interface enp0s8.
 Then we have a command belonging to Netem, `sudo tc qdisc add dev [name of interface] root tbf rate [value] burst [value] latency [value]` in order to have a bandwidth limit network as it was requested.
@@ -52,6 +61,9 @@ The commands which figure in the last lines are up to install a docker image in 
 The command `iperf -c & [ip address server]` is written in order to emulate the traffic within the net. The letter c means worker-1 is the client of the net. The symbol "&" allows the execution of this command in background.
 
 ## Worker-2
+
+
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine7.png)
 
 We start by giving a correct ip address to our interface.
 Then we activate this interface. Finally we connect worker-2 with the router thanks to the command “sudo ip route add [ip address] via [ip address]”. With our addresses it means that if we want to reach the netowrk 10.1.1.0/30 it is necessary to contact the gateway with ip 192.168.0.1 using the interface enp0s8.
@@ -63,7 +75,7 @@ The command `iperf -c [ip address server] &` is written in order to emulate the 
 
 First of all it is necessary to press the command `vagrant up` in order to generate the bandwidth limited virtual network you have previously configured in the Vagrantfile and in the other files.sh.
 This passage may request a while.
-Once it is ready, write in your terminal `./test.sh`. This command is udes to open a file.sh and as a consequence you will see another window about to open.
+Once it is ready, write in your terminal `bash test.sh`. This command is udes to open a file.sh and as a consequence you will see another window about to open.
 This is the bash menu with all the possible options. So read them carefully.
 You may want to monitor one of the devices and print the corrispondent information in a file.txt, or maybe you just prefe to open and read one of these files.txt you have already generated.
 All you need to do is digit the appropriate number and follow the instructions provided.
@@ -80,3 +92,6 @@ The second four options allow us to open and display the files.txt we have creat
 Finally the last one show the the bandwidth is actually limited. The passages in order to do so are: choose a device, enter the device (`vagrant ssh [name of the device`]) and then write the command suggested in the terminal.
 The commands within the nine options are automated and when they are not is because they are interactive.
 The tenth option let us exite from this menu.
+
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine9.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine1.png)
