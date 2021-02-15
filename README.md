@@ -24,9 +24,6 @@ All Vagrant configuration is done in the file called Vagrantfile, it contains th
 Notes: the memory of worker-1 and worker-2 had to be increased to 512 with the command “vb.memory” due to the fact they have to be able to download a docker image inside themselves.
 
 
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine2.png)
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine3.png)
-
 # Devices Configuration
 
 ## Switch
@@ -98,6 +95,7 @@ The commands within the nine options are automated and when they are not is beca
 The tenth option let us exite from this menu.
 
 ![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine9.png)
+
 ![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine1.png)
 
 ## Team members
