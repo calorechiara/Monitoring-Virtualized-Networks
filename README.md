@@ -20,6 +20,8 @@ This is a simple example of a Network made up by a switch, a router and two host
 
 All Vagrant configuration is done in the file called Vagrantfile, it contains the settings of each virtual machine.
 Notes: the memory of worker-1 and worker-2 had to be increased to 512 with the command “vb.memory” due to the fact they have to be able to download a docker image inside themselves.
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine2.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine3.png)
 
 # Devices Configuration
 
