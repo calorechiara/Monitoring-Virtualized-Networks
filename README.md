@@ -86,7 +86,7 @@ Trying these options you will find two important commands. They are the one that
 `VBoxManage metrics collect --period 10 --samples 1 worker-1 CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee [name of the device].txt`: this command collects information about the net and both print it on the screen and inside a file .txt.
 `sudo tc qdisc show dev [name of the interface you want do display]` : it is used to verify the limit of the bandwidth.
 
-[![Watch the video](https://youtu.be/4f32HZxE94k)
+![demo](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Bash.gif)
 
 ## About test.sh
 
