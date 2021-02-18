@@ -99,6 +99,6 @@ The tenth option let us exite from this menu.
 ![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine1.png)
 
 ## Team members
-This project has been realised by Miotto Sara (matriculation number: 202440), Cesaro Pasquale Alan (matriculation number: 202182) and Calore Chiara (matriculation number: 202404) 
+This project has been realised by Miotto Sara (matriculation number: 202440), Cesaro Pasquale Alan (matriculation number: 202182) and Calore Chiara (matriculation number: 202404).
 
 
