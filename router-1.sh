@@ -9,5 +9,4 @@ sudo ip link add link enp0s8 name enp0s8.3 type vlan id 3
 sudo ip addr add 192.168.0.1/23 dev enp0s8.2
 sudo ip addr add 192.168.2.1/23 dev enp0s8.3
 sudo ip link set dev enp0s8 up
-sudo apt-get install iperf
-iperf -s &
+
