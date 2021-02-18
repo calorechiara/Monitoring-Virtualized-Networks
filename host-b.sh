@@ -14,5 +14,4 @@ sudo ip addr add 192.168.2.2/23 dev enp0s8
 sudo ip link set dev enp0s8 up
 #Defaul gateway set up
 sudo ip route add 192.168.0.0/22 via 192.168.2.1
-sudo apt-get install iperf
-iperf -c 192.168.2.1
+
