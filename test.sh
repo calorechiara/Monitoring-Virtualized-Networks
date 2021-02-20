@@ -9,25 +9,25 @@ do
             echo "you chose choice $REPLY which is $opt"
             echo "Collecting information..."
             echo "press Ctrl+C when you want to stop the monitoring of the net and wait"
-            VBoxManage metrics collect --period 1 --samples 1 worker-1 CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee worker-1.txt
+            VBoxManage metrics collect --period 4 --samples 1 worker-1 CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee worker-1.txt
             ;;
         "Monitor worker-2")
             echo "you chose choice $REPLY which is $opt"
             echo "Collecting information..."
             echo "press Ctrl+C when you want to stop the monitoring of the net and wait"
-            VBoxManage metrics collect --period 1 --samples 1 worker-2 CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee worker-2.txt
+            VBoxManage metrics collect --period 4 --samples 1 worker-2 CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee worker-2.txt
             ;;
         "Monitor router")
             echo "you chose choice $REPLY which is $opt"
             echo "Collecting information..."
             echo "press Ctrl+C when you want to stop the monitoring of the net and wait"
-            VBoxManage metrics collect --period 1 --samples 1 Router CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee router.txt        
+            VBoxManage metrics collect --period 4 --samples 1 Router CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee router.txt        
             ;;
         "Monitor switch") 
             echo "you chose choice $REPLY which is $opt"
             echo "Collecting information..."
             echo "press Ctrl+C when you want to stop the monitoring of the net and wait"
-            VBoxManage metrics collect --period 1 --samples 1 Switch CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee switch.txt
+            VBoxManage metrics collect --period 4 --samples 1 Switch CPU/Loader/User,CPU/Load/Kernel,RAM/Usage/Used,Disk/Usage/Used,Net/Rate/Rx,Net/Rate/Tx,Guest/RAM/Usage/Total,Guest/RAM/Usage/Free | tee switch.txt
             ;;
         "Visualize information worker-1")
             echo "you chose choice $REPLY which is $opt"
