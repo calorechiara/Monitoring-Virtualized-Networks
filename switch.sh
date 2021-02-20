@@ -8,8 +8,6 @@ sudo ovs-vsctl add-br switch
 sudo ovs-vsctl add-port switch enp0s8
 sudo ovs-vsctl add-port switch enp0s9 tag="2"
 sudo ovs-vsctl add-port switch enp0s10 tag="3"
-sudo apt install iperf
-sudo tc qdisc add dev enp0s3 root tbf rate 1mbit burst 32kbit latency 400ms
 sudo tc qdisc add dev enp0s8 root tbf rate 1mbit burst 32kbit latency 400ms
 sudo tc qdisc add dev enp0s9 root tbf rate 1mbit burst 32kbit latency 400ms
 sudo tc qdisc add dev enp0s10 root tbf rate 1mbit burst 32kbit latency 400ms
