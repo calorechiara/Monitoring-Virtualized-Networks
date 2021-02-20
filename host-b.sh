@@ -12,6 +12,7 @@ sudo docker run --name nginx -p 80:80 -d dustnic82/nginx-test
 #Network interface config
 sudo ip addr add 192.168.2.2/23 dev enp0s8
 sudo ip link set dev enp0s8 up
+sudo tc qdisc add dev enp0s8 root tbf rate 1mbit burst 32kbit latency 400ms
 #Defaul gateway set up
 sudo ip route add 192.168.0.0/22 via 192.168.2.1
 
