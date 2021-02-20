@@ -38,7 +38,7 @@ Notes: the memory of worker-1 and worker-2 had to be increased to 512 with the c
 
 ## Switch
 
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine4.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/pasted%20image%200%20(1).png)
 
 The first three lines are provided in a template and have the purpose to install the commands for the configuration of the switch itself.
 The second step is to create the bridge with the so called command `add-br`.
@@ -48,7 +48,7 @@ Finally the commands `sudo ip link set [name of the interface] up` are used to e
 
 ## Router-1
 
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine5.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/pasted%20image%200.png)
 
 First of all it is necessary to enable the Kernel option for IP forwarding with the command `sudo sysctl -w net.ipv4.ip_forward=1`.
 Then the other commands are fundamental in order to connect the router with the two hosts.
@@ -59,7 +59,7 @@ To conclude `sudo ip link set dev enp0s8 up` brings the interfaces up.
 
 ## Worker-1
 
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine6.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/8ec4687e-e7a5-4c99-aaf1-4a59b3cd7693%20(1).jpg)
 
 The commands are the same as the ones used in the router and in the switch: so we begin by giving a correct ip address to our interface.
 Then we activate this interface.
@@ -69,7 +69,7 @@ The commands which figure in the last lines are up to install a docker image in 
 
 ## Worker-2
 
-![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/Immagine7.png)
+![alt text here](https://github.com/calorechiara/Monitoring-Virtualized-Networks/blob/main/other/pasted%20image%200%20(2).png)
 
 We start by giving a correct ip address to our interface.
 Then we activate this interface.
