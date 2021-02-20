@@ -9,5 +9,6 @@ sudo ip route add 192.168.0.0/22 via 192.168.0.1
 sudo apt-get update
 sudo apt -y install docker.io
 sudo systemctl start docker
+sudo tc qdisc add dev enp0s8 root tbf rate 1mbit burst 32kbit latency 400ms
 
 
