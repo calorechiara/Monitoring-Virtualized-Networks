@@ -63,7 +63,7 @@ To conclude `sudo ip link set dev enp0s8 up` brings the interfaces up.
 
 The commands are the same as the ones used in the router and in the switch: so we begin by giving a correct ip address to our interface.
 Then we activate this interface.
-Finally we connect worker-1 with the router thanks to the command `sudo ip route add [ip address] via [ip address]`.It means that if we want to reach the network 10.1.1.0/30 it is necessary to contact the gateway with ip 192.168.0.1 using the interface enp0s8.
+Finally we connect worker-1 with the router thanks to the command `sudo ip route add [ip address] via [ip address]`.It means that if we want to reach worker 2 it is necessary to contact the gateway with ip 192.168.0.1 using the interface enp0s8.
 Then we have a command belonging to Netem, `sudo tc qdisc add dev [name of interface] root tbf rate [value] burst [value] latency [value]` in order to have a bandwidth limit network as it was requested.
 The commands which figure in the last lines are up to install a docker image in order to make more realistic our network and so they are not necessary for the creation of this host itself.
 
@@ -73,7 +73,7 @@ The commands which figure in the last lines are up to install a docker image in 
 
 We start by giving a correct ip address to our interface.
 Then we activate this interface.
-After that we connect worker-2 with the router thanks to the command `sudo ip route add [ip address] via [ip address]`. It means that if we want to reach the netowrk 10.1.1.0/30 it is necessary to contact the gateway with ip 192.168.2.1 using the interface enp0s8.
+After that we connect worker-2 with the router thanks to the command `sudo ip route add [ip address] via [ip address]`. It means that if we want to reach worker 1 it is necessary to contact the gateway with ip 192.168.2.1 using the interface enp0s8.
 Then we have a command belonging to Netem, `sudo tc qdisc add dev [name of interface] root tbf rate [value] burst [value] latency [value]` in order to have a bandwidth limit network as it was requested.
 As for worker-1 the commands which figure in the last lines are up to install a docker image in order to make more realistic our network and so they are not necessary for the creation of this host itself.
 
