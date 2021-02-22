@@ -87,7 +87,7 @@ else if test $number = "4"
     echo "sudo tc qdisc show dev [name of the interface you want do display]"
     echo "You can select one of the ensuing interfaces:"
     echo "enp0s8.2, enp0s8.3"
-    vagrant ssh router 
+    vagrant ssh router-1 
     else
         echo "Not a known interface"
         exit 1
